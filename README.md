@@ -17,12 +17,15 @@ were inadvertently left open at the end of a unit test.
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pytest-openfiles-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pytest-openfiles-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pytest-openfiles-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pytest-openfiles-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-openfiles/badges/version.svg)](https://anaconda.org/conda-forge/pytest-openfiles)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-openfiles/badges/downloads.svg)](https://anaconda.org/conda-forge/pytest-openfiles)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytest--openfiles-green.svg)](https://anaconda.org/conda-forge/pytest-openfiles) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytest-openfiles.svg)](https://anaconda.org/conda-forge/pytest-openfiles) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytest-openfiles.svg)](https://anaconda.org/conda-forge/pytest-openfiles) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytest-openfiles.svg)](https://anaconda.org/conda-forge/pytest-openfiles) |
 
 Installing pytest-openfiles
 ===========================
