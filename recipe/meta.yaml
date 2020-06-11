@@ -20,6 +20,7 @@ requirements:
   build:
     - python
     - pip
+    - setuptools_scm
     - pytest >=4.6
     - psutil
   run:
