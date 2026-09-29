@@ -1,33 +1,31 @@
 schema_version: 1
 
 context:
-  name: pytest-openfiles
-  version: "0.5.0"
-  git_url: https://github.com/astropy/pytest-openfiles
+  version: '0.6.0'
 
 package:
-  name: ${{ name|lower }}
+  name: pytest-openfiles
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 179c2911d8aee3441fee051aba08e0d9b4dab61b829ae4811906d5c49a3b0a58
-  file_name: ${{ name }}-${{ version }}.tar.gz
+  url: https://github.com/astropy/pytest-openfiles/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: 4a118c1eedc1a4adac0e96a3b4eb03b192e2df8c9228ac367b51e4a0560d3ffd
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
+  script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python ${{ python_min }}.*
     - pip
+    - setuptools >=30.3.0
     - setuptools_scm
-    - pytest >=4.6
-    - psutil
+    - wheel
   run:
     - python >=${{ python_min }}
+    - packaging
     - pytest >=4.6
     - psutil
 
@@ -48,13 +46,10 @@ about:
     This package provides a plugin for the pytest framework that allows
     developers to detect whether any file handles or other file-like objects
     were inadvertently left open at the end of a unit test.
-  homepage: ${{ git_url }}
-  repository: ${{ git_url }}
-  documentation: ${{ git_url }}
+  homepage: https://github.com/astropy/pytest-openfiles
 
 extra:
   recipe-maintainers:
     - astrofrog-conda-forge
     - drdavella
     - mwcraig
-
